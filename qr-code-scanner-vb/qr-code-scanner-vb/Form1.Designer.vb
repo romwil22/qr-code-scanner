@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,14 +24,13 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.qrCodePicureBox = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ResultTextBox = New System.Windows.Forms.TextBox()
+        Me.frameTimer = New System.Windows.Forms.Timer(Me.components)
         Me.StartButton = New System.Windows.Forms.Button()
         Me.ScanButton = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.qrCodePicureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,21 +43,13 @@ Partial Class Form1
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Camera:"
         '
-        'ComboBox1
+        'qrCodePicureBox
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(90, 11)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(185, 21)
-        Me.ComboBox1.TabIndex = 1
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 38)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(425, 306)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.qrCodePicureBox.Location = New System.Drawing.Point(16, 38)
+        Me.qrCodePicureBox.Name = "qrCodePicureBox"
+        Me.qrCodePicureBox.Size = New System.Drawing.Size(425, 306)
+        Me.qrCodePicureBox.TabIndex = 2
+        Me.qrCodePicureBox.TabStop = False
         '
         'Label2
         '
@@ -66,30 +57,30 @@ Partial Class Form1
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(447, 38)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 20)
+        Me.Label2.Size = New System.Drawing.Size(163, 20)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Result Text"
+        Me.Label2.Text = "Contact Infomation"
         '
-        'TextBox1
+        'ResultTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(451, 62)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(281, 282)
-        Me.TextBox1.TabIndex = 3
+        Me.ResultTextBox.Location = New System.Drawing.Point(451, 62)
+        Me.ResultTextBox.Multiline = True
+        Me.ResultTextBox.Name = "ResultTextBox"
+        Me.ResultTextBox.Size = New System.Drawing.Size(281, 282)
+        Me.ResultTextBox.TabIndex = 3
         '
-        'Timer1
+        'frameTimer
         '
-        Me.Timer1.Interval = 1000
+        Me.frameTimer.Interval = 1000
         '
         'StartButton
         '
         Me.StartButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StartButton.Location = New System.Drawing.Point(562, 350)
+        Me.StartButton.Location = New System.Drawing.Point(89, 6)
         Me.StartButton.Name = "StartButton"
-        Me.StartButton.Size = New System.Drawing.Size(75, 43)
+        Me.StartButton.Size = New System.Drawing.Size(37, 28)
         Me.StartButton.TabIndex = 4
-        Me.StartButton.Text = "Start"
+        Me.StartButton.Text = "On"
         Me.StartButton.UseVisualStyleBackColor = True
         '
         'ScanButton
@@ -99,35 +90,33 @@ Partial Class Form1
         Me.ScanButton.Name = "ScanButton"
         Me.ScanButton.Size = New System.Drawing.Size(75, 43)
         Me.ScanButton.TabIndex = 4
-        Me.ScanButton.Text = "Scan"
+        Me.ScanButton.Text = "Save File"
         Me.ScanButton.UseVisualStyleBackColor = True
         '
-        'Form1
+        'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(744, 399)
         Me.Controls.Add(Me.ScanButton)
         Me.Controls.Add(Me.StartButton)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ResultTextBox)
+        Me.Controls.Add(Me.qrCodePicureBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
+        Me.Name = "form1"
         Me.Text = "QR Code Scanner"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.qrCodePicureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents qrCodePicureBox As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents ResultTextBox As TextBox
+    Friend WithEvents frameTimer As Timer
     Friend WithEvents StartButton As Button
     Friend WithEvents ScanButton As Button
 End Class
