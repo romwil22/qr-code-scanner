@@ -34,4 +34,10 @@ Public Class form1
             End If
         End If
     End Sub
+
+    Private Sub form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If captureCamera.IsRunning Then
+            captureCamera.Stop()
+        End If
+    End Sub
 End Class

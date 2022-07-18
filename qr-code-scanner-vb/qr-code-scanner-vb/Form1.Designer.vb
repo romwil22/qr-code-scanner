@@ -48,6 +48,7 @@ Partial Class form1
         Me.qrCodePicureBox.Location = New System.Drawing.Point(16, 38)
         Me.qrCodePicureBox.Name = "qrCodePicureBox"
         Me.qrCodePicureBox.Size = New System.Drawing.Size(425, 306)
+        Me.qrCodePicureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.qrCodePicureBox.TabIndex = 2
         Me.qrCodePicureBox.TabStop = False
         '
