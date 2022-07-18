@@ -30,6 +30,7 @@ Partial Class form1
         Me.frameTimer = New System.Windows.Forms.Timer(Me.components)
         Me.StartButton = New System.Windows.Forms.Button()
         Me.saveFileButton = New System.Windows.Forms.Button()
+        Me.clearButton = New System.Windows.Forms.Button()
         CType(Me.qrCodePicureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,35 +78,53 @@ Partial Class form1
         '
         'StartButton
         '
+        Me.StartButton.BackColor = System.Drawing.SystemColors.Control
+        Me.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.StartButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartButton.Location = New System.Drawing.Point(89, 6)
         Me.StartButton.Name = "StartButton"
         Me.StartButton.Size = New System.Drawing.Size(37, 28)
         Me.StartButton.TabIndex = 4
         Me.StartButton.Text = "On"
-        Me.StartButton.UseVisualStyleBackColor = True
+        Me.StartButton.UseVisualStyleBackColor = False
         '
         'saveFileButton
         '
+        Me.saveFileButton.BackColor = System.Drawing.SystemColors.Info
         Me.saveFileButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.saveFileButton.Location = New System.Drawing.Point(657, 233)
         Me.saveFileButton.Name = "saveFileButton"
         Me.saveFileButton.Size = New System.Drawing.Size(75, 43)
         Me.saveFileButton.TabIndex = 4
         Me.saveFileButton.Text = "Save File"
-        Me.saveFileButton.UseVisualStyleBackColor = True
+        Me.saveFileButton.UseVisualStyleBackColor = False
+        '
+        'clearButton
+        '
+        Me.clearButton.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.clearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearButton.Location = New System.Drawing.Point(576, 233)
+        Me.clearButton.Name = "clearButton"
+        Me.clearButton.Size = New System.Drawing.Size(75, 43)
+        Me.clearButton.TabIndex = 4
+        Me.clearButton.Text = "Clear"
+        Me.clearButton.UseVisualStyleBackColor = False
         '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(744, 399)
+        Me.Controls.Add(Me.clearButton)
         Me.Controls.Add(Me.saveFileButton)
         Me.Controls.Add(Me.StartButton)
         Me.Controls.Add(Me.ResultTextBox)
         Me.Controls.Add(Me.qrCodePicureBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "form1"
         Me.Text = "QR Code Scanner"
         CType(Me.qrCodePicureBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -121,4 +140,5 @@ Partial Class form1
     Friend WithEvents frameTimer As Timer
     Friend WithEvents StartButton As Button
     Friend WithEvents saveFileButton As Button
+    Friend WithEvents clearButton As Button
 End Class

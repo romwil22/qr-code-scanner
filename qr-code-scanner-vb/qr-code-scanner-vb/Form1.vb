@@ -48,4 +48,8 @@ Public Class form1
         MessageBox.Show("File successfully save.", "Information")
         ResultTextBox.Clear()
     End Sub
+
+    Private Sub clearButton_Click(sender As Object, e As EventArgs) Handles clearButton.Click
+        ResultTextBox.Clear()
+    End Sub
 End Class
