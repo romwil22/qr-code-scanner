@@ -29,7 +29,7 @@ Partial Class form1
         Me.ResultTextBox = New System.Windows.Forms.TextBox()
         Me.frameTimer = New System.Windows.Forms.Timer(Me.components)
         Me.StartButton = New System.Windows.Forms.Button()
-        Me.ScanButton = New System.Windows.Forms.Button()
+        Me.saveFileButton = New System.Windows.Forms.Button()
         CType(Me.qrCodePicureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,10 +64,11 @@ Partial Class form1
         '
         'ResultTextBox
         '
+        Me.ResultTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResultTextBox.Location = New System.Drawing.Point(451, 62)
         Me.ResultTextBox.Multiline = True
         Me.ResultTextBox.Name = "ResultTextBox"
-        Me.ResultTextBox.Size = New System.Drawing.Size(281, 282)
+        Me.ResultTextBox.Size = New System.Drawing.Size(281, 165)
         Me.ResultTextBox.TabIndex = 3
         '
         'frameTimer
@@ -84,22 +85,22 @@ Partial Class form1
         Me.StartButton.Text = "On"
         Me.StartButton.UseVisualStyleBackColor = True
         '
-        'ScanButton
+        'saveFileButton
         '
-        Me.ScanButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScanButton.Location = New System.Drawing.Point(657, 350)
-        Me.ScanButton.Name = "ScanButton"
-        Me.ScanButton.Size = New System.Drawing.Size(75, 43)
-        Me.ScanButton.TabIndex = 4
-        Me.ScanButton.Text = "Save File"
-        Me.ScanButton.UseVisualStyleBackColor = True
+        Me.saveFileButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveFileButton.Location = New System.Drawing.Point(657, 233)
+        Me.saveFileButton.Name = "saveFileButton"
+        Me.saveFileButton.Size = New System.Drawing.Size(75, 43)
+        Me.saveFileButton.TabIndex = 4
+        Me.saveFileButton.Text = "Save File"
+        Me.saveFileButton.UseVisualStyleBackColor = True
         '
         'form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(744, 399)
-        Me.Controls.Add(Me.ScanButton)
+        Me.Controls.Add(Me.saveFileButton)
         Me.Controls.Add(Me.StartButton)
         Me.Controls.Add(Me.ResultTextBox)
         Me.Controls.Add(Me.qrCodePicureBox)
@@ -119,5 +120,5 @@ Partial Class form1
     Friend WithEvents ResultTextBox As TextBox
     Friend WithEvents frameTimer As Timer
     Friend WithEvents StartButton As Button
-    Friend WithEvents ScanButton As Button
+    Friend WithEvents saveFileButton As Button
 End Class

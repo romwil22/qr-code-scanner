@@ -40,4 +40,12 @@ Public Class form1
             captureCamera.Stop()
         End If
     End Sub
+
+    Private Sub saveFileButton_Click(sender As Object, e As EventArgs) Handles saveFileButton.Click
+        Dim contactWriter As System.IO.StreamWriter
+        contactWriter = My.Computer.FileSystem.OpenTextFileWriter("contactInfo.txt", True)
+        contactWriter.WriteLine(ResultTextBox.Text)
+        MessageBox.Show("File successfully save.", "Information")
+        ResultTextBox.Clear()
+    End Sub
 End Class
